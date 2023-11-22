@@ -1,5 +1,21 @@
 # 求两个整数的最大公约数
 
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+# 输入两个正整数
+num1 = int(input("请输入第一个正整数："))
+num2 = int(input("请输入第二个正整数："))
+
+# 调用gcd函数求最大公约数
+result = gcd(num1, num2)
+
+print(f"{num1} 和 {num2} 的最大公约数是：{result}")
+
+
 # 遍历法
 def gcd1(num1, num2):
     res = 0
